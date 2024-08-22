@@ -17,13 +17,11 @@ public class Grades {
     }
 
     public void viewGrades() {
-        // Correct the average calculation
+        
         double average = (this.p + this.m + this.pf + this.f) / 4;
 
-        // Correct the logic for remarks
         String remarks = (average <= 3.0) ? "Passed" : "Failed";
         
-        // Correct the formatting string and fix syntax errors
         System.out.printf("%-10d %-10s %-10.2f %-10.2f %-10.2f %-10.2f %-10.2f %-10s\n",
             this.id, this.name, this.p, this.m, this.pf, this.f, average, remarks);
     }
