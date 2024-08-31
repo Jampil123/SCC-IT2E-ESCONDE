@@ -1,13 +1,38 @@
 
 package javaapp1;
 
+import java.util.Scanner;
+
 public class JavaApp1 {
 
     public static void main(String[] args) {
-        Grades gr = new Grades();
-        gr.addGrades(1011,"John Phil ",1.3,2.2,2.3,1.3);
-        gr.viewGrades();
+        Scanner sc = new Scanner(System.in);
+        Grade gr = new Grade();
+        Sales sales = new Sales();
+        Products pr = new Products();
         
+        int choice;
+        
+        do{
+            System.out.println("1.Grades\n2.Product\n3.Sales\n");
+            System.out.print("Enter Choice: ");
+            choice = sc.nextInt();
+            
+        switch (choice){
+            
+            case 1:
+                 gr.getGrade();
+                 break;
+            case 2:
+                 pr.getProducts();
+                break;
+            case 3:
+                sales.getSales();
+                break;
+            case 4:
+                break;
+          }
+        }while( choice > 3 || choice < 0 );
 //        Grades gr1 = new Grades();
 //        gr1.addGrades(1011,"John Phil ",3.3,3.2,3.3,3.3);
 //        gr1.viewGrades();

@@ -3,9 +3,9 @@ package javaapp1;
 
 public class Grades {
     
-     int id;
     String name;
-    double p, m, pf, f;
+    int id;
+    double p, m, pf, f, average;
     
     public void addGrades(int sid, String sname, double sp, double sm, double spf, double sf) {
         this.id = sid;
@@ -18,7 +18,7 @@ public class Grades {
 
     public void viewGrades() {
         
-        double average = (this.p + this.m + this.pf + this.f) / 4;
+        average = (this.p + this.m + this.pf + this.f) / 4;
 
         String remarks = (average <= 3.0) ? "Passed" : "Failed";
         
