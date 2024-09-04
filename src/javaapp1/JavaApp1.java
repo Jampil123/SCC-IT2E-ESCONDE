@@ -10,11 +10,12 @@ public class JavaApp1 {
         Grade gr = new Grade();
         Sales sales = new Sales();
         Products pr = new Products();
+        Account acr = new Account();
         
         int choice;
         
         do{
-            System.out.println("1.Grades\n2.Product\n3.Sales\n");
+            System.out.println("1.Grades\n2.Product\n3.Sales\n4.Accounts");
             System.out.print("Enter Choice: ");
             choice = sc.nextInt();
             
@@ -30,6 +31,7 @@ public class JavaApp1 {
                 sales.getSales();
                 break;
             case 4:
+                acr.getAccounts();
                 break;
           }
         }while( choice > 3 || choice < 0 );
