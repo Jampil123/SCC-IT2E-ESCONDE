@@ -1,40 +1,36 @@
 
 package javaapp1;
 
-import java.util.Scanner;
-
 public class Sales {
-    public void getSales(){
-     Scanner input = new Scanner(System.in);
-        
-        String name_customer,product_name;
-        float price,cash;
-        int qty;
-        System.out.print("Enter Customer Name: ");
-        name_customer = input.nextLine();
-        System.out.print("Enter Product Name: ");
-        product_name = input.nextLine();
-        System.out.print("Enter Quantity: ");
-        qty = input.nextInt();
-        System.out.print("Enter Price: ");
-        price = input.nextFloat();
-        System.out.print("Enter Cash: ");
-        cash = input.nextFloat();
-        
+    
+    String name_customer, name_product;
+    int quantity;
+    double price, cash ;
+    
+    public void addSales(String ncustomer, String nproduct,int qty, double cprice, double ccash){
+        this.name_customer = ncustomer;
+        this.name_product = nproduct;
+        this.quantity = qty;
+        this.price = cprice;
+        this.cash = ccash;    
+    }
+    
+    public void viewSales(){
         System.out.println("----------------------");
         System.out.println("RECEIPT: ");
         System.out.println("----------------------");
         
         System.out.println("Name: "+name_customer);
-        System.out.println("Item Name: "+product_name);
-        System.out.println("Quantity: "+qty);
+        System.out.println("Item Name: "+name_product);
+        System.out.println("Quantity: "+quantity);
         System.out.println("----------------------");
-        System.out.println("Total Due: "+(qty*price));
-        System.out.println("Cash: "+cash);
+        System.out.printf("Total Due: %.2f\n", quantity * price);
+        System.out.printf("Cash: %.2f\n", cash);
         System.out.println("----------------------");
-        System.out.println("Change: "+(cash-(qty-price)));
-             
+        System.out.printf("Change: %.2f\n",cash-(quantity * price));
+             }
+        }
         
-     }
     
-}
+    
+

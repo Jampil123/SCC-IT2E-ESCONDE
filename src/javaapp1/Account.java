@@ -4,7 +4,7 @@ package javaapp1;
 import java.util.Scanner;
 
 public class Account {
-     Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     Accounts[] acs = new Accounts[100];
     
     public void getAccounts(){

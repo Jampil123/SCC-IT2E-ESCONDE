@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Grade {
     
-    public void getGrade(){     
+    public void getGrades(){     
     Scanner sc = new Scanner(System.in);
     
     System.out.print("Enter No. of Student: ");
